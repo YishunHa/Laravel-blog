@@ -75,10 +75,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Contact me as you want
+                    Contact {{$data['fullname']}} as you want
                 </div>
                 <p>
-                  Any question, contact me by yal0858@gmail.com
+                  Any question, contact me by {{$data['email']}}
                 </p>
 
 

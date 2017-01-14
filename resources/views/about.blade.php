@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel blog
+                    about me
                 </div>
                 <p>
                   This is a about page about the Laravel Blog
