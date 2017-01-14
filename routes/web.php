@@ -14,19 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    echo "test";
-});
-
-Route::post('/post', function () {
-    echo "post";
-});
-Route::put('/put', function () {
-    echo "put";
-});
-Route::delete('/delete', function () {
-    echo "delete";
-});
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/about', function () {
+    return view('about');
 });

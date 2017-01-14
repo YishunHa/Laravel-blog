@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    This is a Laravel test page
+                    Laravel blog
                 </div>
                 <p>
                   This is a about page about the Laravel Blog
