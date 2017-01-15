@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>My Blog-About Pages</title>
+    <title>My Blog</title>  <!-- need to be change for each pages -->
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -35,8 +35,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="/">Home </a></li>
-        <li class="active"><a href="/contact">Contact<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/contact">Contact</a></li>
         <li><a href="/about">About</a></li>
       </ul>
       <form class="navbar-form navbar-left">
@@ -64,31 +64,13 @@
 </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="jumbotron">
-                  <h1>Contact me</h1>
-          </div>
 
-       <form >
-         <div class="form-group">
-           <label name="email">Eamil:</label>
-           <input type="text" class="form-control" id="email" name="email">
-         </div>
+      @yield('main content')
+      <hr>
 
-         <div class="form-group">
-           <label name="subject">Subject:</label>
-           <input type="text" class="form-control" id="email" name="subject">
-         </div>
+        <p class="text-center">Copyright Yishun Ha. Powered by <a href="https://laravel.com/">Lavarvel</a> </p>
 
-         <div class="form-group">
-           <label name="message">Message:</label>
-           <textarea type="text" class="form-control" id="meassage" name="meassage">Please text what you want to tell me here.....</textarea>
-         </div>
 
-       </form>
-        </div>
-      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
