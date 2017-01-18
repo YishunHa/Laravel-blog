@@ -2,6 +2,12 @@
 
 @section('title','| Contact ')
 
+  @section('navbar')
+        <li><a href="/">Home</a></li>
+        <li  class="active"><a href="/contact">Contact <span class="sr-only">(current)</span></a></li>
+        <li><a href="/about">About</a></li>
+  @endsection
+
 @section('main content')
 
 
