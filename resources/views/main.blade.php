@@ -9,6 +9,7 @@
 
 
     <div class="container">
+      @include('parts.message')
 
       @yield('main content')
 
