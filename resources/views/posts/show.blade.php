@@ -18,19 +18,19 @@
         <div class="well">
           <dl class="dl-horizontal">
             <dt>Create at</dt>
-            <dd>time</dd>
+            <dd>{{date('M j, Y H:i',strtotime($post->created_at))}}</dd>
           </dl>
           <dl class="dl-horizontal">
             <dt>Last update:</dt>
-            <dd>time</dd>
+            <dd>{{date('M j, Y H:i',strtotime($post->updated_at))}}</dd>
           </dl>
           <hr>
           <div class="row">
             <div class="col-sm-6">
-                <a href="#" class="btn btn-success btn-block">Edit</a>
+              {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-success btn-block')) !!}
             </div>
             <div class="col-sm-6">
-                <a href="#" class="btn btn-danger btn-block">Delete</a>
+              {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
             </div>
           </div>
         </div>
