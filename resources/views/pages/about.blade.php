@@ -2,11 +2,7 @@
 
 @section('title', '| About ')
 
-@section('navbar')
-      <li><a href="/">Home</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li  class="active"><a href="/about">About <span class="sr-only">(current)</span></a></li>
-@endsection
+
 
 @section('main content')
 
