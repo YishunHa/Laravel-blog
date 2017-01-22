@@ -2,11 +2,7 @@
 
 @section('title','| View Posts')
 
-  @section('navbar')
-        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/about">About</a></li>
-@endsection
+
 
 @section('main content')
     <div class="row">
