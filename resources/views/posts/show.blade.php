@@ -2,7 +2,9 @@
 
 @section('title','| View Posts')
 
-
+@section('stylesheets')
+      {{Html::style('css/custom.css')}}
+@endsection
 
 @section('main content')
     <div class="row">
@@ -32,6 +34,21 @@
 
               {!! Form::close() !!}
             </div>
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+              {{Html::linkRoute('posts.index', 'See All Blogs', [],['class' => 'btn btn-default btn-block btn-h1-spacing'])}}
+            </div>
+            
+           <div class="col-mod-2">
+
+           </div>
           </div>
         </div>
 
