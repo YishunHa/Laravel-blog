@@ -21,10 +21,15 @@
          <hr>
        </div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
           <table class="table">
+            <!-- <th>#</th> -->
+
             <thead>
-              <th>#</th>
+
               <th>Title</th>
               <th>Body</th>
               <th>Created at</th>
@@ -36,13 +41,16 @@
 
             @foreach ($posts as $post)
                <tr>
-                <th>{{ $post->id }}</th>
-                <td>{{ $post->title }}</td>
-                <td>{{ substr($post->body, 0, 50) }}
-                  {{ strlen($post -> body > 50 ? "...." : "") }}</td>
+                 <!-- <th>{ $post->id }}</th> -->
+
+                <td>{{ substr($post->title, 0, 35) }}{{ strlen($post -> title) > 35 ? "...." : "" }}</td>
+                <td>{{ substr($post->body, 0, 60) }}{{ strlen($post -> body) > 60 ? "...." : "" }}</td>
                 <td>{{ date('M j, Y', strtotime($post->created_at))}}</td>
                 <td><a href="{{route('posts.show', $post->id)}}" class="btn btn-default btn-sm">View</a>  <a href="{{ route('posts.edit', $post->id)}}" class="btn btn-primary btn-sm">Edit</a></td>
                </tr>
+
+
+
 
 
 
@@ -54,6 +62,9 @@
 
             </tbody>
           </table>
+
+        </div>
+        <div class="col-md-1">
 
         </div>
 
