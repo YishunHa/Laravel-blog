@@ -15,12 +15,16 @@
       <div class="col-md-4">
         <div class="well">
           <dl class="dl-horizontal">
-            <dt>Create at</dt>
-            <dd>{{date('M j, Y H:i',strtotime($post->created_at))}}</dd>
+            <label>Url:</label>
+            <p><a href="{{ url($post->slug) }}">{{url($post->slug)}}</a></p>
           </dl>
           <dl class="dl-horizontal">
-            <dt>Last update:</dt>
-            <dd>{{date('M j, Y H:i',strtotime($post->updated_at))}}</dd>
+            <label>Create at</label>
+            <p>{{date('M j, Y H:i',strtotime($post->created_at))}}</p>
+          </dl>
+          <dl class="dl-horizontal">
+            <label>Last update:</label>
+            <p>{{date('M j, Y H:i',strtotime($post->updated_at))}}</p>
           </dl>
           <hr>
           <div class="row">
@@ -45,7 +49,7 @@
             <div class="col-md-8">
               {{Html::linkRoute('posts.index', 'See All Blogs', [],['class' => 'btn btn-default btn-block btn-h1-spacing'])}}
             </div>
-            
+
            <div class="col-mod-2">
 
            </div>
