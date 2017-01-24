@@ -7,6 +7,19 @@
 
 }
 .form-title-css   {
-   margin-top: 20px;
+
    font-size: 18pt;
+}
+.btn-h1-spacing  {
+  margin-top: 20px;
+}
+
+.form-single-message {
+   margin-top: 20px;
+   font-size:13pt;
+
+}
+
+.form-single-title {
+    font-size: 21pt;
 }
