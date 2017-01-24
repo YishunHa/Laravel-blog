@@ -17,6 +17,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/', 'PageController@getHome');
 
   Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle']) ->where('slug', '[\w\d\-\_]+');
+  Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
 
   Route::get('/about', 'PageController@getAbout');
 
@@ -25,5 +26,8 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::resource('posts','PostController');
 
-
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

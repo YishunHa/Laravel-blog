@@ -21,7 +21,7 @@
         {{Form::label('slug','Slug:')}}{{Form::text('slug',null, array('class' => 'form-control','required' =>'', 'minlength' => '5', 'maxlength' => '255'))}}
         {{Form::label('body', "Post Body:", array('style' => 'margin-top: 20px'))}}
         {{Form::textarea('body',null, array('class' => 'form-control', 'required' => ''))}}
-        {{Form::submit('Creat New Post', array('class' => 'btn btn-primary btn-lg btn-block', 'style' => 'margin-top: 20px'))}}
+        {{Form::submit('Creat New Post', array('class' => 'btn btn-success btn-lg col-md-offset-5', 'style' => 'margin-top: 20px'))}}
 
 
 

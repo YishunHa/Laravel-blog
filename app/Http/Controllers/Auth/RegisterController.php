@@ -6,6 +6,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -68,4 +69,5 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    
 }
