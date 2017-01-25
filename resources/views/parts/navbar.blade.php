@@ -1,5 +1,5 @@
 <!-- default bootstrap navbar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-static-top">
 <div class="container-fluid">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header">
@@ -9,7 +9,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="#">My Blog</a>
+  <a class="navbar-brand" href="http://apple.com"><span class="glyphicon glyphicon-apple" style="font-size:25px;border-radius:50%;margin:0;"></span></a>
 </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,7 +18,6 @@
     <li class="{{ Request::is('/') ? "active" :""}}"><a href="/">Home <span class="sr-only">(current)</span></a></li>
     <li class="{{ Request::is('blog') ? "active" :""}}"><a href="/blog">Blogs</a></li>
     <li class="{{ Request::is('contact') ? "active" :""}}"><a href="/contact">Contact</a></li>
-    <li class="{{ Request::is('about') ? "active" :""}}"><a href="/about">About</a></li>
   </ul>
   <form class="navbar-form navbar-left">
 

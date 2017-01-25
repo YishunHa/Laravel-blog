@@ -12,7 +12,7 @@
 
      <div class="row">
        <div class="col-md-10">
-         <h1>All Post</h1>
+         <h1><span class="glyphicon glyphicon-user" style="color:#777"></span> All Post</h1>
        </div>
       <div class="col-md-2">
         <a href="{{ route('posts.create') }}" class="btn btn-success btn-lg btn-block btn-h1-margin">Ceate New Post</a>

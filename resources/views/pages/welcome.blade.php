@@ -12,7 +12,7 @@
           <div class="jumbotron">
                   <h1>Welcome to My Blog</h1>
                   <p class="lead">Thank you for visiting, this is  a blog about my personal daily life.</p>
-                  <p><a class="btn btn-primary btn-lg" href="{{ route('blog.index')}}" role="button">My Post</a></p>
+                  <p><a class="btn btn-info btn-lg" href="{{ route('blog.index')}}" role="button">My Post</a></p>
          </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
         <div class="post">
           <h3>{{ $post->title }}</h3>
           <p>{{ substr($post->body,0,300)}}{{ strlen($post->body) > 300 ? "....." : ""}}</p>
-            <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-primary">More about it</a>
+            <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-warning">More about it</a>
         </div>
 
          <hr>
