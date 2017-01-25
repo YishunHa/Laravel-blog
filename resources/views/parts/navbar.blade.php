@@ -37,7 +37,7 @@
                     <li>
                       <li><a href="{{ url('/posts') }}">My Post</a></li>
                       <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
+                      <li><a href="#">More function to be added</a></li>
                       <li><a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
