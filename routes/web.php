@@ -14,7 +14,7 @@
 
 
 Route::group(['middleware' => ['web']], function () {
-  Route::get('/', 'PageController@getHome');
+  Route::get('/', ['uses' => 'PageController@getHome', 'as' => 'home']);
 
   Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle']) ->where('slug', '[\w\d\-\_]+');
   Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
@@ -23,6 +23,10 @@ Route::group(['middleware' => ['web']], function () {
 
 
   Route::get('/contact', 'PageController@getContact');
+
+  Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
+
+  Route::post('/contact', 'PageController@postContact');
 
   Route::resource('posts','PostController');
 
