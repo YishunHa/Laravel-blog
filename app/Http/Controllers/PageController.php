@@ -10,6 +10,8 @@ use App\Http\Controllers\Controllers;
 
 class PageController extends Controller {
 
+
+
      public function getHome() {
        $post = Post::orderBy('created_at', 'desc')->limit(5)->get();
        return view('pages.welcome')->withPosts($post);

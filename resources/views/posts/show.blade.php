@@ -11,7 +11,37 @@
       <div class="col-md-8">
         <h1>{{ $post->title }}</h1>
         <p class="lead">{{ $post->body }}</p>
+       <hr>
+        <div id="manage-comments" style="margin-top:50px;">
+          <h3>Comments <small>{{ $post->comments()->count() }}</small></h3>
+
+          <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Comment</th>
+                  <th width="70px"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                @foreach ($post->comments as $comments)
+                  <tr>
+                  <td>{{ $comments->name }}</td>
+                  <td>{{ $comments->email }}</td>
+                  <td>{{ $comments->comment }}</td>
+                  <td>
+                    <a href="{{ route('comments.edit', $comments->id) }}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span></a>
+                    <a href="{{ route('comments.delete', $comments->id)}}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                  </td>
+                  </tr>
+                @endforeach
+              </tbody>
+          </table>
+        </div>
       </div>
+
       <div class="col-md-4">
         <div class="well">
           <dl class="dl-horizontal">
